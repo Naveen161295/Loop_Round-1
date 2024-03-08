@@ -1,6 +1,7 @@
 This README file provides an overview and guidelines for setting up and using Cucumber integrated with TestNG along with the Page Object Model (POM) framework for automated testing.
 
 Table of Contents
+==================
 => Introduction
 => Prerequisites
 => Folder Structure
@@ -36,25 +37,25 @@ src
         └── features
             └── DataVerification.feature
 
-'src/test/java': Contains source code files and test files including Step Defintion and Test Runner files
+'src/test/java': Contains source code files and test files including Step Definition and Test Runner files
           1.) Step Definition File:
                 => Step definitions are written in Java and map the steps defined in feature files to executable code.
-                => In this step Definition file, the test cases are converted into methods and the methods are placed in this file. The methods are organized as per the page wise setup for our convinence.
+                => In this step Definition file, the test cases are converted into methods and the methods are placed in this file. The methods are organized as per the page-wise setup for our convenience.
                 => Hooks Class have Before and after annotations which have launching the browser and URL and quit the browser after the execution is done.
-                => Other classes like loginstepdef, withinpagestepdef etc., have an methods that are relatable to the classes for execution.
+                => Other classes like loginstepdef, withinpagestepdef, etc., have methods that are relatable to the classes for execution.
           2.) Test Runner File:
-                => Test Runner File is used for execution. For executing this testNG framework cucumber options tag is used. In cucumber options, we have feature, monochrome, dryRun, glue keywords are used.
+                => Test Runner File is used for execution. For executing this testNG framework cucumber options tag is used. In cucumber options, we have feature, monochrome, dryRun, and glue keywords used.
                 => AbstractTestNGCucumberTests is a predefined class used to execute the TestNG framework.
           3.) Text Context file:
-                => This package is used to maintain our locators for each page using page Object Model (POM). Once the execution starts from test Runner Class, moved into stepdefinition class.
-                => In this step definition class, a method created in the text context file is called using object which was created in the step definition class.
+                => This package is used to maintain our locators for each page using the page Object Model (POM). Once the execution starts from the test Runner Class, moves into step definition class.
+                => In this step definition class, a method created in the text context file is called using the object that was created in the step definition class.
                 => Page Object Model (POM) is implemented to represent web pages as Java classes. Each page class contains locators and methods to interact with elements on that page.
-                => Page Object Model is used to maintain the locators for that particular page by using the private webelement which prevents the overriding of same locators in the another page.
-                => By using POM with Page factory concepts, we can initialize all the elements present in that page anywhere by using driver. "this" keyword is used as chain link constructor.
+                => Page Object Model is used to maintain the locators for that particular page by using the private web element which prevents the overriding of the same locators on another page.
+                => By using POM with Page factory concepts, we can initialize all the elements present on that page anywhere by using a driver. "this" keyword is used as a chain link constructor.
           4.) Utility File:
-                => Utility class have reusable predefined methods. A predefined methods have been reused again and again. This will reduce the line of code and we can use this reusable code whenever we want.
-                => TestContextSetup class have variable initialization. A variable is declared as public static, because the variable can be called by any method and it can be used anywhere. Example: the value of variable col1 is taken from 
-                textContext file is stored in this textcontextsetup and this value compared/used in step definition file say assert condition.
+                => Utility class have reusable predefined methods. Predefined methods have been reused again and again. This will reduce the line of code and we can use this reusable code whenever we want.
+                => TestContextSetup class has variable initialization. A variable is declared as public static because the variable can be called by any method and it can be used anywhere. Example: the value of variable col1 is taken from 
+                textContext file is stored in this textcontextsetup and this value is compared/used in the step definition file say assert condition.
   'src/test/resources': Contains feature files written in Gherkin syntax.
           1.)DataVerification.feature:
                 => The feature file have 2 scenarios such as data verification and data validation.
@@ -65,3 +66,7 @@ Conclusion:
   => Cucumber integrated with TestNG along with the Page Object Model provides a powerful framework for automated testing. 
   => It enables collaboration between technical and non-technical team members, ensures test reusability, and maintains code readability. 
   => With proper setup and organization, this framework can greatly enhance the efficiency and reliability of your testing process.
+
+NOTE:
+=====
+=> Automated Test Recordings and Part 2 Assignment extracted files are attached. 
