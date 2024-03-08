@@ -69,4 +69,4 @@ Conclusion:
 
 NOTE:
 =====
-=> Automated Test Recordings and Part 2 Assignment extracted files are attached. 
+=> Automated Test Recordings [Round1_loop.mp4] and Part 2 Assignment extracted files [data.csv] are attached. 
